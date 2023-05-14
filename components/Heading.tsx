@@ -6,6 +6,7 @@ export function Heading({id = '', level = 1, children, className}) {
     {
       id,
       className: ['heading', className].filter(Boolean).join(' '),
+      style: { textDecoration: level === 3 ? 'underline': 'none'}
     },
     children
   );

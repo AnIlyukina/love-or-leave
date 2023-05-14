@@ -43,6 +43,7 @@ function collectHeadings(node, sections = []) {
 export type MyAppProps = MarkdocNextJsPageProps
 
 export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
+  console.log(Component)
   const { markdoc } = pageProps;
 
   let title = TITLE;
@@ -55,11 +56,10 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
       description = markdoc.frontmatter.description;
     }
   }
-
+  
   const toc = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : [];
-
   return (
     <>
       <Head>
@@ -71,13 +71,13 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <TopNav>
+      {/* <TopNav>
         <Link href="/docs">Docs</Link>
-      </TopNav>
+      </TopNav> */}
       <div className="page">
         <SideNav />
         <main className="flex column">
-          <Component {...pageProps} />
+          <Component{...pageProps} />
         </main>
         <TableOfContents toc={toc} />
       </div>
@@ -85,7 +85,7 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
         {`
           .page {
             position: fixed; 
-            top: var(--top-nav-height);
+            // top: var(--top-nav-height);
             display: flex;
             width: 100vw;
             flex-grow: 1;
