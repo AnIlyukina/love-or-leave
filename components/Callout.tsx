@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 export function Callout({ title, children }) {
-  console.log('2')
   return (
     <div className="callout">
       <strong>{title}</strong>
