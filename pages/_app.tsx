@@ -43,7 +43,6 @@ function collectHeadings(node, sections = []) {
 export type MyAppProps = MarkdocNextJsPageProps
 
 export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
-  console.log(Component)
   const { markdoc } = pageProps;
 
   let title = TITLE;
