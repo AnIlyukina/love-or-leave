@@ -10,10 +10,14 @@ export function Spoiler({ title, children }) {
       <style jsx>
         {`
           .spoiler-summary {
-            padding-bottom: 5px;
+            padding: 10px;
+            background: #c8c8ee;
+            border-radius: 5px;
+            margin-top:15px;
+            cursor: pointer;
           }
           .spoiler-content {
-            border: 1px solid grey;
+            border: 2px solid #c8c8ee;
             border-radius: 5px;
             padding: 10px;
             font-size:14px
