@@ -11,13 +11,14 @@ export function Spoiler({ title, children }) {
         {`
           .spoiler-summary {
             padding: 10px;
-            background: #c8c8ee;
+            //background: #c8c8ee;
+            background: #fff;
             border-radius: 5px;
             margin-top:15px;
             cursor: pointer;
           }
           .spoiler-content {
-            border: 2px solid #c8c8ee;
+            border: 2px solid #fff;
             border-radius: 5px;
             padding: 10px;
             font-size:14px

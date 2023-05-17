@@ -74,7 +74,7 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
         <Link href="/docs">Docs</Link>
       </TopNav> */}
       <div className="page">
-        <SideNav />
+        {/* <SideNav /> */}
         <main className="flex column">
           <Component{...pageProps} />
         </main>
